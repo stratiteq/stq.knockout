@@ -1,5 +1,5 @@
 var stq = stq || {},
-stq.extensions = (function(extensions){
+stq.ko = (function(ko){
 
     /*
      * ObservableArray extensions
@@ -31,5 +31,5 @@ stq.extensions = (function(extensions){
         this.splice(index, count || 1);
     }
 
-    return extensions;
-})(stq.extensions || {});
+    return ko;
+})(stq.ko || {});
