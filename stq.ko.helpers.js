@@ -4,7 +4,7 @@ stq.ko = (function(ko){
 	//Performs the equivalent of calling jQuery.extend and throwing the result into ko.mapping.fromJS
 	//Only difference is that all objects thar are properties of other objects are made observable whereas
 	//ko.mapping only makes simple types observable.
-	ko.extendObservable = function(target){
+	ko.extendAsObservable = function(target){
 		var mergeObjects = function (t, blueprint) {
                     //Loop through all the properties on the blueprint, we will later push them onto the target
                     for (propName in blueprint) {
