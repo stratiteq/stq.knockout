@@ -27,8 +27,6 @@ stq.ko = (function(ko){
                                     }
                                 }
                                 if (isArray(blueprintValue)) {
-                                    if (target && target.elementType() === 'CheckboxList')
-                                        var v = '';
                                     //Try to merge items if the target is also an array. Otherwise overwrite.
                                     targetValue = ko.observableArray(mergePlainArrays(targetValue, blueprintValue));
                                 }
