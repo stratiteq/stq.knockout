@@ -10,6 +10,13 @@ A collection of extensions and helper functions for KnockoutJS
     
     Objects in arrays are also merged based on index in the array. Meaning that target.arrayProp[0] will get every property from object1.arrayProp[0].
     
+
+## Extenders
+* **delayedSubscribe**
+	Triggers a callback when an observable updates, but only after it has gone a set amount of time without updating again. Useful for text search when a new search should be performed on keystrokes, but only after typing ended (without blur event or such). 
+
+	Used like this: ko.oservable('').extend({delayedSubscribe: { callback: function(){...}, delay:400 } });
+
     
 ## Extensions
 #### ObservableArrays
