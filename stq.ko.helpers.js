@@ -44,6 +44,9 @@ stq.ko = (function(stqko){
                             //These should hopefully be simple value types by now, make them observable.
                             targetValue = ko.observable(blueprintValue);
                         }
+                        else if (isFunction(blueprintValue)) {
+                            targetValue = blueprintValue;
+                        }
                         if (t.hasOwnProperty(pN) && ko.isObservable(t[pN]) && !ko.isComputed(t[pN])) {
                             //TODO: Test this
                             t[pN](ko.isObservable(targetValue) ? targetValue() : targetValue);
